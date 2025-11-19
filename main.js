@@ -171,7 +171,7 @@ const translations = {
         premium5:"مُحسّن للأجهزة المحمولة",premium6:"دعم لمدة شهر",premium7:"الرسوم المتحركة المخصصةو3D",premium8:"نماذج الاتصال",premium9:"روابط وسائل التواصل الاجتماعي",
         note1:"جميع الأسعار قابلة للتفاوض بناءً على تعقيد المشروع ومتطلباته",note2:"تعديلات إضافية مدفوعة الأجر بعد فترة الدعم",
         contact_title: "تواصل معنا",
-        contact_subtitle: "إرسال رسالة",
+        contact_subtitle: "إرسال رسالة", view:"عرض المشروع",
     },
     en: {} // الإنجليزية تبقى فارغة أو ممكن تحط النصوص الأصلية هنا
 };
@@ -214,4 +214,5 @@ langToggle.addEventListener('change', () => {
     translatePage(currentLang);
     localStorage.setItem('lang', currentLang);
 });
+
 
