@@ -19,41 +19,49 @@
 </head>
 <body>
     <header class="header">
-         <a href="#" class="logo">Code-Nestio</a>
+        <a href="#" class="logo" data-key="logo">Code-Nestio</a>
         <i class="bx bx-menu" id="menu-icon"></i>
                  <nav class="navbar">
-                <a href="#" >HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#service">SERVICES</a>
-                <a href="#portfolio">PORTFOLIO</a>
-                <a href="#pricing">PRICING</a>
-                <a href="#contact">CONTACT</a>
-               <button id="dark-mode-toggle" class="btn btn-sm">🌙</button>
+                <a href="#" data-key="home" >HOME</a>
+                <a href="#about" data-key="about">ABOUT</a>
+                <a href="#service" data-key="services">SERVICES</a>
+                <a href="#portfolio"  data-key="portfolio">PORTFOLIO</a>
+                <a href="#pricing" data-key="pricing"  >PRICING</a>
+                <a href="#contact" data-key="contact">CONTACT</a>
                  </nav>
+            <div class="header-buttons">
+                <div class="lang-switch">
+                    <input type="checkbox" id="langToggle">
+                    <label for="langToggle" class="slider"></label>
+                </div>
+                <button id="dark-mode-toggle" class="btn btn-sm">🌙</button>
+            </div>
+        </div>
+        </div>
     </header>
     <section class="hero">
         <div class="hero-slide" style="background-image:url('slid3.jpg');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Invest in Your Success </h1>
-                <p class="hero-subtitle">Affordable plans to launch your professional website.</p> <br>
-                <a href="#pricing" class="btn btn-primary btn-lg mt-3">See Plans</a>
+                <h1 class="hero-title" data-key="hero1_title">Invest in Your Success </h1>
+                <p class="hero-subtitle" data-key="hero1_subtitle">Affordable plans to launch your professional website.</p> <br>
+                <a href="#pricing" class="btn btn-primary btn-lg mt-3" data-key="see_plans">See Plans</a>
             </div>
         </div>
         <div class="hero-slide" style="background-image:url('slide2.jpg');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Experience Excellence</h1>
-                <p class="hero-subtitle">Top frontend development with interactive effects and smooth UX.</p> <br>
-                <a href="#service" class="btn btn-primary btn-lg mt-3">Our Services</a>
+                <h1 class="hero-title" data-key="hero2_title" >Experience Excellence</h1>
+                <p class="hero-subtitle" data-key="hero2_subtitle" >Top frontend development with interactive effects and smooth UX.</p> <br>
+                <a href="#service" class="btn btn-primary btn-lg mt-3" data-key="our_services">Our Services</a>
             </div>
         </div>
         <div class="hero-slide" style="background-image:url('slide1.jpg');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">See Our Work</h1>
-                <p class="hero-subtitle">Explore recent projects and get inspired for your website.</p> <br>
-                <a href="#portfolio" class="btn btn-primary btn-lg mt-3">View Portfolio</a>
+                <h1 class="hero-title" data-key="hero3_title">See Our Work</h1>
+                <p class="hero-subtitle" data-key="hero3_subtitle">Explore recent projects and get inspired for your website.</p> <br>
+                <a href="#portfolio" class="btn btn-primary btn-lg mt-3" data-key="view_portfolio">View Portfolio</a>
             </div>
         </div>
         <div class="hero-prev">&#10094;</div>
@@ -67,43 +75,43 @@
     </section>
     <section id="about" class="py-5">
         <div class="container text-center">
-            <h1 id="aboutTitle">About Me</h1>
-            <p id="aboutText">I'm Abdullah alassal, a Frontend Developer. I turn your creative ideas into interactive and user-friendly websites using HTML, CSS, JavaScript, and React. I focus on crafting fast, modern, and accessible web experiences.</p>
+            <h1 id="aboutTitle" data-key="about_title">About Me</h1>
+            <p id="aboutText" data-key="about_text">I'm Abdullah alassal, a Frontend Developer. I turn your creative ideas into interactive and user-friendly websites using HTML, CSS, JavaScript, and React. I focus on crafting fast, modern, and accessible web experiences.</p>
         </div>
     </section>
     <section id="service" class="py-5">
         <div class="container text-center">
-            <h1 class="section-title">Our Services</h1>
+            <h1 class="section-title" data-key="services_title">Our Services</h1>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <h3> Frontend Website Development</h3>
-                    <p>Building fully responsive pages using HTML, CSS, and JavaScript with clean, optimized structure.</p>
+                    <h3 data-key="service1_title"> Frontend Website Development</h3>
+                    <p data-key="service1_text">Building fully responsive pages using HTML, CSS, and JavaScript with clean, optimized structure.</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Professional Effects & Animations</h3>
-                    <p>Implementing sliders, parallax effects, scroll animations, transitions, and simple 3D interactions for a dynamic experience.</p>
+                    <h3 data-key="service2_title">Professional Effects & Animations</h3>
+                    <p data-key="service2_text">Implementing sliders, parallax effects, scroll animations, transitions, and simple 3D interactions for a dynamic experience.</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Portfolio & Landing Page Creation</h3>
-                    <p>Designing high-quality landing pages and portfolio websites for individuals and businesses.</p>
+                    <h3 data-key="service3_title">Portfolio & Landing Page Creation</h3>
+                    <p data-key="service3_text">Designing high-quality landing pages and portfolio websites for individuals and businesses.</p>
                 </div>
             <div class="portfolio-item">
-                <h3>Arabic Support & Dark Mode Integration</h3>
-                <p>Full RTL Arabic support and Dark/Light Mode with saved user preference.</p>
+                <h3 data-key="service4_title">Arabic Support & Dark Mode Integration</h3>
+                <p data-key="service4_text">Full RTL Arabic support and Dark/Light Mode with saved user preference.</p>
             </div>
         </div>
         </div>
     </section>
     <section id="portfolio" class="py-5">
         <div class="container text-center">
-            <h1 class="section-title">My Portfolio</h1>
-            <p class="section-subtext">Some of my recent frontend projects</p>
+            <h1 class="section-title" data-key="portfolio_title">My Portfolio</h1>
+            <p class="section-subtext" data-key="portfolio_subtitle">Some of my recent frontend projects</p>
 
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <video src="Code-Nestio1.mp4" autoplay muted loop></video>
                     <h3>Online-Store</h3> <br>
-                    <p>🚀 Check out Code-Nestio-Demo E-Commerce Site,Built as a demo online store,featuring: <br>
+                    <p data-key="projict_subtitle">🚀 Check out Code-Nestio-Demo E-Commerce Site,Built as a demo online store,featuring: <br>
                         Clean, modern design,Arabic & English support,Interactive 3D effects & smooth animations. <br>
                         Explore the design and functionality!</p> <br> <br> <br> <br> <br> <br> <br>
                     <a href="https://online-store-virid-one.vercel.app/"  target="_blank" class="btn btn-primary btn-lg mt-3"> View Project</a>
@@ -112,7 +120,7 @@
                 <div class="portfolio-item">
                     <video src="Designer%20Portfolio%202.mp4" autoplay muted loop playsinline></video>
                     <h3>Designer Adham's Portfolio</h3> <br>
-                    <p>he website was built using <br>
+                    <p data-key="projict2_subtitle">he website was built using <br>
                         💻 HTML + CSS + JavaScript <br>
                         🎞️ Attractive animation effects <br>
                         🌐 Language switching (Arabic/English) <br>
@@ -125,7 +133,7 @@
                 <div class="portfolio-item">
                     <video src="Web%20Developer.mp4" autoplay muted loop playsinline></video>
                     <h3>WebDev Revolution 2025</h3> <br>
-                    <p>A fully responsive, multilingual website for the 2025 web development revolution, <br>
+                    <p data-key="projict3_subtitle">A fully responsive, multilingual website for the 2025 web development revolution, <br>
                         featuring 3D animated backgrounds (Three.js), a dynamic countdown timer, <br>
                         speaker previews, and interactive components. <br>
                         Optimized for mobile devices.</p> <br> <br> <br> <br><br>
@@ -135,7 +143,7 @@
                 <div class="portfolio-item">
                     <video src="Designer-Portfolio.mp4" autoplay muted loop playsinline></video>
                     <h3>Designer's Portfolio</h3> <br>
-                    <p>Fully responsive design across all devices 📱💻<br>
+                    <p data-key="projict4_subtitle">Fully responsive design across all devices 📱💻<br>
                         Smooth scrolling and subtle motion effects, A sleek user interface that showcases your creativity <br>
                         Easily customizable for any designer or artist <br>
                         💼 Skills used: HTML5 , CSS3 (Flexbox and Grid) ,JavaScript (ScrollReveal and Typed.js) , Responsive web design</p> <br> <br> <br>
@@ -145,15 +153,15 @@
                 <div class="portfolio-item">
                     <video src="John%20Doe.mp4" autoplay muted loop playsinline></video>
                     <h3>Basic Portfolio Website</h3> <br>
-                    <p>A basic version of an interactive portfolio website with a modern and responsive design, <br>
+                    <p data-key="projict5_subtitle">A basic version of an interactive portfolio website with a modern and responsive design, <br>
                         built using HTML, CSS, and JavaScript. The design focuses on simplicity and a smooth user experience.</p> <br>
                     <a href="https://web-developer-puce.vercel.app/"   target="_blank" class="btn btn-primary btn-lg mt-3"> View Project</a>
                 </div>
 
                 <div class="portfolio-item">
                     <video src="add.mp4" autoplay muted loop playsinline></video>
-                    <h3>Basic Portfolio Website</h3> <br>
-                    Project: Personal Portfolio Website showcasing my work and skills. <br>
+                    <h3 >Basic Portfolio Website</h3> <br>
+                  <p data-key="projict6_subtitle"> Project: Personal Portfolio Website showcasing my work and skills. <br>
                     Tech: HTML, CSS, JavaScript, Responsive Design, Dark Mode, Interactive UI.</p> <br> <br> <br>
                     <a href="https://web-developer-puce.vercel.app/"   target="_blank" class="btn btn-primary btn-lg mt-3"> View Project</a>
                 </div>
@@ -161,7 +169,7 @@
                 <div class="portfolio-item">
                     <video src="My-Blog.mp4" autoplay muted loop playsinline></video>
                     <h3>🚀 Personal Blog !</h3> <br>
-                    <p>Designed using HTML, CSS, and JavaScript, it features: <br>
+                    <p data-key="projict7_subtitle">Designed using HTML, CSS, and JavaScript, it features: <br>
                         Responsive design 🖥️📱 <br>
                         Fixed header and mobile menu</p> <br> <br> <br> <br><br>
                     <a href="https://myblog-snowy-six.vercel.app/"  target="_blank" class="btn btn-primary btn-lg mt-3"> View Project</a>
@@ -173,9 +181,9 @@
 
         <div class="pricing-header">
 
-            <h1>Choose Your Plan</h1>
+            <h1 data-key="pricing_title">Choose Your Plan</h1>
 
-            <p>Select the perfect package for your project needs</p>
+            <p data-key="pricing_subtitle">Select the perfect package for your project needs</p>
 
         </div>
 
@@ -192,7 +200,7 @@
 
                 </div>
 
-                <h2 >Basic</h2>
+                <h2 data-key="basic_plan" >Basic</h2>
                 <div class="price">
                     <div class="new-price-box">
                  <span class="new-price">
@@ -203,19 +211,19 @@
 
                 <ul class="features">
 
-                    <li ><i class='bx bx-check'></i> Responsive Design</li>
-                    <li ><i class='bx bx-check'></i> Up to 4 Pages</li>
-                    <li ><i class='bx bx-check'></i> Uploading to Vercel</li>
-                    <li ><i class='bx bx-check'></i> Mobile Optimized</li>
-                    <li ><i class='bx bx-check'></i> 1 Week Support</li>
-                    <li ><i class='bx bx-check'></i> Contact Forms</li>
+                    <li data-key="basic1" ><i class='bx bx-check' ></i > Responsive Design</li>
+                    <li data-key="basic2" ><i class='bx bx-check'></i> Up to 4 Pages</li>
+                    <li data-key="basic3" ><i class='bx bx-check'></i> Uploading to Vercel</li>
+                    <li data-key="basic4" ><i class='bx bx-check'></i> Mobile Optimized</li>
+                    <li data-key="basic5"><i class='bx bx-check'></i> 1 Week Support</li>
+                    <li data-key="basic6" ><i class='bx bx-check'></i> Contact Forms</li>
                     <li class="disabled"><i class='bx bx-x'></i> Custom Animations</li>
                     <li class="disabled"><i class='bx bx-x'></i> 3D</li>
 
                 </ul>
                 <br> <br> <br>
 
-                <a href="#contact" class="btn btn-primary btn-lg mt-3">Choose a plan</a>
+                <a href="#contact" class="btn btn-primary btn-lg mt-3" data-key="choose">Choose a plan</a>
 
             </div>
 
@@ -232,7 +240,7 @@
 
                 </div>
 
-                <h2  >Professional</h2>
+                <h2 data-key="professional_plan" >Professional</h2>
 
                 <div class="price">
 
@@ -245,28 +253,28 @@
 
                 <ul class="features">
 
-                    <li ><i class='bx bx-check'></i> Responsive Design</li>
+                    <li data-key="professional1" ><i class='bx bx-check'></i> Responsive Design</li>
 
-                    <li ><i class='bx bx-check'></i> Up to 10 Pages</li>
+                    <li data-key="professional2"><i class='bx bx-check'></i> Up to 10 Pages</li>
 
-                    <li ><i class='bx bx-check'></i> Uploading to Vercel</li>
+                    <li data-key="professional3"><i class='bx bx-check'></i> Uploading to Vercel</li>
 
-                    <li ><i class='bx bx-check'></i> Advanced SEO Tags</li>
+                    <li data-key="professional4"><i class='bx bx-check'></i> Advanced SEO Tags</li>
 
-                    <li ><i class='bx bx-check'></i> Mobile Optimized</li>
+                    <li data-key="professional5"><i class='bx bx-check'></i> Mobile Optimized</li>
 
-                    <li ><i class='bx bx-check'></i> 2 Weeks' Support</li>
+                    <li data-key="professional6"><i class='bx bx-check'></i> 2 Weeks' Support</li>
 
-                    <li ><i class='bx bx-check'></i> Custom Animations and 3D Graphics </li>
+                    <li data-key="professional7"><i class='bx bx-check'></i> Custom Animations and 3D Graphics </li>
 
-                    <li ><i class='bx bx-check'></i> Contact Forms</li>
+                    <li data-key="professional8"><i class='bx bx-check'></i> Contact Forms</li>
 
-                    <li ><i class='bx bx-check'></i> Social media links</li>
+                    <li data-key="professional9"><i class='bx bx-check'></i> Social media links</li>
 
                 </ul>
                 <br>
 
-                <a href="#contact" class="btn btn-primary btn-lg mt-3">Choose a plan</a>
+                <a href="#contact" class="btn btn-primary btn-lg mt-3" data-key="choose">Choose a plan</a>
 
             </div>
 
@@ -282,7 +290,7 @@
 
                 </div>
 
-                <h2 >Premium</h2>
+                <h2  data-key="premium_plan">Premium</h2>
 
                 <div class="price">
 
@@ -295,27 +303,27 @@
 
                 <ul class="features">
 
-                    <li ><i class='bx bx-check'></i>Responsive Design</li>
+                    <li data-key="premium1"><i class='bx bx-check'></i>Responsive Design</li>
 
-                    <li ><i class='bx bx-check'></i>Unlimited Pages</li>
+                    <li data-key="premium2"><i class='bx bx-check'></i>Unlimited Pages</li>
 
-                    <li ><i class='bx bx-check'></i>Uploading to Vercel + up a domain if available</li>
+                    <li data-key="premium3"><i class='bx bx-check'></i>Uploading to Vercel + up a domain if available</li>
 
-                    <li ><i class='bx bx-check'></i> Premium SEO</li>
+                    <li data-key="premium4"><i class='bx bx-check'></i> Premium SEO</li>
 
-                    <li ><i class='bx bx-check'></i> Mobile Optimized</li>
+                    <li data-key="premium5"><i class='bx bx-check'></i> Mobile Optimized</li>
 
-                    <li ><i class='bx bx-check'></i> 1 Months Support</li>
+                    <li data-key="premium6"><i class='bx bx-check'></i> 1 Months Support</li>
 
-                    <li ><i class='bx bx-check'></i> Custom Animations and 3D Graphics</li>
+                    <li data-key="premium7"><i class='bx bx-check'></i> Custom Animations and 3D Graphics</li>
 
-                    <li ><i class='bx bx-check'></i> Contact Forms</li>
+                    <li data-key="premium8"><i class='bx bx-check'></i> Contact Forms</li>
 
-                    <li ><i class='bx bx-check'></i> Social media links</li>
+                    <li data-key="premium9"><i class='bx bx-check'></i> Social media links</li>
 
                 </ul>
 
-                <a href="#contact" class="btn btn-primary btn-lg mt-3">Choose a plan</a>
+                <a href="#contact" class="btn btn-primary btn-lg mt-3" data-key="choose">Choose a plan</a>
 
             </div>
 
@@ -325,8 +333,8 @@
 
         <div class="pricing-note">
 
-            <p  class='bx bx-info-circle'> All prices are negotiable based on project complexity and requirements</p>
-            <p  class='bx bx-info-circle'> Additional paid modifications after the support period</p>
+            <p data-key="note1"  class='bx bx-info-circle'> All prices are negotiable based on project complexity and requirements</p>
+            <p  data-key="note2" class='bx bx-info-circle'> Additional paid modifications after the support period</p>
 
         </div>
 
@@ -342,13 +350,13 @@
             </iframe>
         </div>
         <div class="container text-center contact-content">
-            <h1 class="section-title">Contact Me</h1>
+            <h1 class="section-title" data-key="contact_title">Contact Me</h1>
 
             <form class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="name"  placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn" data-key="contact_subtitle">Send Message</button>
             </form>
         </div>
     </section>
