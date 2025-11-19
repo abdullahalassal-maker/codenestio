@@ -42,6 +42,7 @@ body.dark-mode {
 }
 
 
+/* ========================== HEADER ========================== */
 .header {
     position: fixed;
     width: 100%;
@@ -56,13 +57,18 @@ body.dark-mode {
     z-index: 1000;
 }
 
+/* Logo + Hamburger */
 .header .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     gap: 20px;
@@ -79,12 +85,76 @@ body.dark-mode {
     color: #CA4852;
 }
 
+/* Hamburger */
 #menu-icon {
     display: none;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1100;
     position: relative;
+}
+
+/* Header buttons (language + dark mode) */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ========================== LANGUAGE SWITCH ========================== */
+.lang-switch {
+    position: relative;
+}
+
+.lang-switch input {
+    display: none;
+}
+
+.slider {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.slider::after {
+    content: "EN AR";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+    transform: translateX(30px);
 }
 
 .hero {
@@ -579,46 +649,64 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
 }
 
 
-@media (max-width: 600px) {
-    .header { flex-direction: column; align-items: flex-start; }
+/* ========================== MEDIA QUERIES ========================== */
+@media (max-width: 992px) {
+    .header { padding: 15px 30px; }
+    .hero { height: 70vh; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+}
 
+@media (max-width: 768px) {
+    /* Hamburger */
+    #menu-icon { display: block; }
+
+    /* Navbar مخفية وتفتح فقط عند الضغط */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(161, 30, 49, 0.7);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 999;
+    }
+
+    .navbar.active { display: flex; }
+    .navbar a { margin: 10px 0; font-size: 1.2rem; }
+
+    /* Hero height أصغر */
+    .hero { height: 60vh; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .btn-lg { font-size: 1rem; padding: 8px 20px; }
+
+    /* Header fix: اللوجو + همبرجر على نفس السطر */
+    .header {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .header .logo { gap: 10px; }
+    .header-buttons {
+        display: flex;
+        gap: 10px;
+        position: relative;
+    }
+}
+
+@media (max-width: 600px) {
     .hero { height: 50vh; }
     .hero-title { font-size: 1.5rem; }
     .hero-subtitle { font-size: 0.9rem; }
     .btn-lg { font-size: 0.9rem; padding: 6px 15px; }
-
     .hero-prev, .hero-next { font-size: 1.5rem; padding: 0 8px; }
     .hero-indicators span { width: 8px; height: 8px; margin: 0 2px; }
-}
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-        width: 100%;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .btn-lg {
-        font-size: 1rem;
-        padding: 8px 20px;
-    }
-
-    .hero-prev, .hero-next {
-        font-size: 2rem;
-        padding: 0 10px;
-    }
-
-    .hero-indicators span {
-        width: 10px;
-        height: 10px;
-        margin: 0 3px;
-    }
 }
 /* CONTACT WITH MAP BACKGROUND */
 .contact-section {
@@ -658,13 +746,6 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
     border-radius: 12px;
     backdrop-filter: blur(4px);
 }
-
-/* تنسيق بسيط */
-.contact-form input,
-.contact-form textarea {
-    background: rgba(255, 255, 255, 0.9);
-}
-
 html, body {
     overflow-x: hidden;
 }
