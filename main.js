@@ -110,7 +110,6 @@ contactForm.addEventListener('submit', function(e) {
 // ======== TRANSLATION ========
 const translations = {
     ar: {
-        logo: "كود-نيستيو",
         home: "الرئيسية",
         about: "من نحن",
         services: "الخدمات",
@@ -215,3 +214,4 @@ langToggle.addEventListener('change', () => {
     translatePage(currentLang);
     localStorage.setItem('lang', currentLang);
 });
+
