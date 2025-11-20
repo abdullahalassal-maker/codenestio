@@ -202,12 +202,12 @@ input:checked + .slider::before {
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
@@ -749,3 +749,4 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
 html, body {
     overflow-x: hidden;
 }
+
