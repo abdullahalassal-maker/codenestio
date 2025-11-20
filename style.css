@@ -618,50 +618,18 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
     transform: scale(1.2);
 }
 
-@media (max-width: 992px) {
-    .header { padding: 15px 30px; }
-    .hero { height: 70vh; } /* خفف ارتفاع السلايدر */
-    .hero-title { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-    .pricing-cards { flex-direction: column; align-items: center; }
-}
-
-@media (max-width: 768px) {
-    #menu-icon { display: block; }
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(161, 30, 49, 0.7);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-        padding: 15px 0;
-    }
-    .navbar.active { display: flex; }
-    .navbar a { margin: 10px 0; font-size: 1.2rem; }
-
-    .hero { height: 60vh; } /* ارتفاع أصغر للشاشات المتوسطة */
-    .hero-title { font-size: 1.8rem; }
-    .hero-subtitle { font-size: 1rem; }
-    .btn-lg { font-size: 1rem; padding: 8px 20px; }
-}
-
 
 /* ========================== MEDIA QUERIES ========================== */
 @media (max-width: 992px) {
     .header { padding: 15px 30px; }
     .hero { height: 70vh; }
-    .hero-title { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1.2rem; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 1rem; }
 }
 
 @media (max-width: 768px) {
-    /* Hamburger */
     #menu-icon { display: block; }
 
-    /* Navbar مخفية وتفتح فقط عند الضغط */
     .navbar {
         display: none;
         flex-direction: column;
@@ -680,11 +648,10 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
 
     /* Hero height أصغر */
     .hero { height: 60vh; }
-    .hero-title { font-size: 1.8rem; }
+    .hero-title { font-size: 1.3rem; }
     .hero-subtitle { font-size: 1rem; }
     .btn-lg { font-size: 1rem; padding: 8px 20px; }
 
-    /* Header fix: اللوجو + همبرجر على نفس السطر */
     .header {
         flex-direction: row !important;
         align-items: center;
@@ -702,7 +669,7 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
 
 @media (max-width: 600px) {
     .hero { height: 50vh; }
-    .hero-title { font-size: 1.5rem; }
+    .hero-title { font-size: 1rem; }
     .hero-subtitle { font-size: 0.9rem; }
     .btn-lg { font-size: 0.9rem; padding: 6px 15px; }
     .hero-prev, .hero-next { font-size: 1.5rem; padding: 0 8px; }
@@ -749,4 +716,5 @@ body.dark-mode .contact-form textarea { background: rgba(91, 19, 27, 0.6);
 html, body {
     overflow-x: hidden;
 }
+
 
